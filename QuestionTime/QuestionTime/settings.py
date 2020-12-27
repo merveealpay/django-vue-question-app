@@ -142,6 +142,13 @@ LOGOUT_REDIRECT_URL = "/"
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "assets"),
+    os.path.join(BASE_DIR, "frontend/dist"),
+]
+
+#STATIC_ROOT = ""
+
 #Custom User Model
 AUTH_USER_MODEL = "users.CustomUser"
 
