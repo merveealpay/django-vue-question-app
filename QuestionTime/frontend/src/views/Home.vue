@@ -50,7 +50,8 @@ export default {
       this.loadingQuestions = true;
       apiService(endpoint)
         .then(data => {
-          this.questions.push(...data.results)
+          this.questions.push(...data)
+          //Object.assign(this.questions, data);
           this.loadingQuestions = false;
           if (data.next) {
             this.next = data.next;

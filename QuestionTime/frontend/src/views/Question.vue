@@ -135,7 +135,7 @@ export default {
       this.loadingAnswers = true;
       apiService(endpoint)
         .then(data => {
-          this.answers.push(...data.results);
+          this.answers.push(...data);
           this.loadingAnswers = false;
           if (data.next) {
             this.next = data.next;
